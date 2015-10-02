@@ -4,14 +4,12 @@ UDACITY TOURNAMENT DATABASE
 This is a database project that shows uses Python and SQL and sample files to test code for a tournament.
 
 Table of contents
-————————————————-
 
 1. Documentation
 2. Testing Information
 3. Copyright and license
 
 What's included
-——————————————-
 
 1. README.md
 2. tournament.sql
@@ -19,7 +17,6 @@ What's included
 4. tournament_test.py
 
 Documentation
-—————————————-
 To use the project files to setup a swiss-system tournament, follow the below steps.
 
 1. Download Files
@@ -48,12 +45,10 @@ CREATE TABLE matches (
     );
 
 Testing Information
-———————————————————
 
 This project can be tested by connecting to the tournanment database via psql and then running the python file tournament_test.py.
 
 Copyright and License
-————————————————————-
 
 tournament_test.py by Udacity.
 
