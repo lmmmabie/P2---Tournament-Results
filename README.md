@@ -19,17 +19,17 @@ What's included
 Documentation
 To use the project files to setup a swiss-system tournament, follow the below steps.
 
-1. Download Files
+Download Files
 
 Download the project files
 
-2. Create Database
+Create Database
 
 Log into your PostgreSQL console and create a new database, for example:
 
 CREATE DATABASE tournament 
 
-3. Create Tables
+Create Tables
 
 There are two tables required for the database.  One table is for players and one form matches.
 
