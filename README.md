@@ -3,35 +3,36 @@ UDACITY TOURNAMENT DATABASE
 
 This is a database project that shows uses Python and SQL and sample files to test code for a tournament.
 
-Table of contents
+TABLE OF CONTENTS
 
 1. Documentation
 2. Testing Information
 3. Copyright and license
 
-What's included
+WHAT'S INCLUDED
 
 1. README.md
 2. tournament.sql
 3. tournament.py
 4. tournament_test.py
 
-Documentation
+DOCUMENTATION
+
 To use the project files to setup a swiss-system tournament, follow the below steps.
 
 Download Files
 
-Download the project files
+- Download the project files
 
 Create Database
 
-Log into your PostgreSQL console and create a new database, for example:
+- Log into your PostgreSQL console and create a new database, for example:
 
-CREATE DATABASE tournament 
+- CREATE DATABASE tournament 
 
 Create Tables
 
-There are two tables required for the database.  One table is for players and one form matches.
+- There are two tables required for the database.  One table is for players and one form matches.
 
 CREATE TABLE players (
     player_id SERIAL primary key, 
