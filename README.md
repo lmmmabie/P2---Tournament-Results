@@ -30,9 +30,10 @@ Create Database
 
 - CREATE DATABASE tournament 
 
-Create Tables
+Create Tables & Views
 
 - There are two tables required for the database.  One table is for players and one form matches.
+- A view is created called standings to report the results
 
 CREATE TABLE players (
     player_id SERIAL primary key, 
