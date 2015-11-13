@@ -61,6 +61,16 @@ Testing Information
 
 This project can be tested by connecting to the tournanment database via psql and then running the python file tournament_test.py.
 
+Commands:
+psql
+drop database tournament;
+create database tournament;
+\c tournament
+\i tournament.sql
+\q
+
+python tournament_test.py
+
 Copyright and License
 
 tournament_test.py by Udacity.
