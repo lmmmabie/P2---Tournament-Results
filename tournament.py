@@ -68,15 +68,15 @@ def playerStandings():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-   db = connect()
+    db = connect()
     c = db.cursor()
-    c.execute("SELECT id, name, wins, matches FROM standings ORDER BY wins DESC;")
-    rows = c.fetchall()
+    c.execute("SELECT * FROM standings ORDER BY 3 DESC;")
+    ps = c.fetchall()
     db.close()
-    return rows
+    return ps
 
 
-def reportMatch(winner, loser):
+def reportMatch(winner, loser, draw):
     """Records the outcome of a single match between two players.
     Args:
       winner:  the id number of the player who won
@@ -84,8 +84,9 @@ def reportMatch(winner, loser):
     """
     db = connect()
     c = db.cursor()
-    c.execute('INSERT INTO matches (winner, loser) '
-              'VALUES (%s, %s)', (winner, loser,))
+    query = "INSERT INTO matches(winner, loser, draw) VALUES (%s, %s, %s);"
+    args = (winner, loser, draw)
+    c.execute(query, args)
     db.commit()
     db.close()
 
@@ -106,17 +107,7 @@ def swissPairings():
         name2: the second player's name
     """
     standings = playerStandings()
-    num = int(countPlayers())
-    pairings = []
-    if (num > 0): 
-        for i in range (num):
-            if (i % 2 == 0):
-                id1 = standings[i][0]
-                name1 = standings[i][1]
-                id2 = standings[i + 1][0]
-                name2 = standings[i + 1][1]
-                pair = (id1, name1, id2, name2)
-                pairings.append(pair)
-    return pairings
-
-
+    next_round = []
+    for i in range(0, len(standings), 2):
+        next_round.append((standings[i][0], standings[i][1], standings[i+1][0], standings[i+1][1]))
+    return next_round 
