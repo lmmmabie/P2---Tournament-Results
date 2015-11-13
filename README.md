@@ -81,4 +81,4 @@ Copyright and License
 
 tournament_test.py by Udacity.
 
-tournament.py and tournament.sql was created by Lee Mabie with heavy contributions from public sources and the Udacity Nanodegree community forums.
+tournament.py and tournament.sql was created by Lee Mabie with heavy contributions from public sources, Github (including work done by Mayer5) and the Udacity Nanodegree community forums.
