@@ -10,8 +10,8 @@ CREATE TABLE players (
 CREATE TABLE matches (
     match_id SERIAL primary key, 
     winner SERIAL references players(player_id), 
-    loser SERIAL references players(player_id)
-    );
+    loser SERIAL references players(player_id),
+    draw boolean);
     
 -- create a view for standings
 CREATE VIEW standings AS 
